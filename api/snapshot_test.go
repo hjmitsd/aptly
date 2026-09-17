@@ -61,7 +61,7 @@ func (s *SnapshotsSuite) TestGetSnapshotsReturns500OnCorruptRefList(c *C) {
 
 // Pull must load the destination references before inferring architectures or
 // preserving existing packages. Both fixtures are ordinary amd64 packages.
-func (_ *SnapshotsSuite) TestPullPreservesDestinationPackages(c *C) {
+func (*SnapshotsSuite) TestPullPreservesDestinationPackages(c *C) {
 	savedConfig, savedContext := utils.Config, context
 	defer func() { utils.Config, context = savedConfig, savedContext }()
 	dir := c.MkDir()
